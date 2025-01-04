@@ -1,16 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace = "com.amcd.figma.template.filler"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.amcd.figma.template.filler"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -63,6 +64,7 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
     implementation(libs.retrofit.moshi)
+    implementation(libs.koin)
 
     testImplementation(libs.junit)
 
