@@ -9,9 +9,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -22,11 +20,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Set up JDK 17 (or required version) for Android
+      # Set up JDK 17 for Android
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'adoptopenjdk'
 
       # Cache Gradle dependencies (to speed up builds)
       - name: Cache Gradle dependencies
@@ -45,6 +44,6 @@ jobs:
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest testReleaseUnitTest
 
-      # Optionally, you can also add a step to run lint checks
+      # Run lint checks
       - name: Run Lint Checks
         run: ./gradlew lint
