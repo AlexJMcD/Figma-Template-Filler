@@ -27,6 +27,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+
+      # Ensure gradlew has the correct permissions
+      - name: Grant execute permissions to gradlew
+        run: chmod +x ./gradlew
+
       # Cache Gradle dependencies (to speed up builds)
       - name: Cache Gradle dependencies
         uses: actions/cache@v3
