@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.2"
+agp = "8.7.3"
 kotlin = "2.0.20"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -8,8 +8,10 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.12.01"
+koin = "4.1.0-Beta3"
+ktlint = "11.1.0"
 moshi = "1.15.2"
-retrofit = "2.9.0"
+retrofit = "2.11.0"
 retrofit-moshi = "2.11.0"
 
 [libraries]
@@ -27,12 +29,16 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+koin = {group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
 moshi = {group = "com.squareup.moshi", name = "moshi", version.ref = "moshi"}
-moshi-kotlin = {group = "com.squareup.moshi-kotlin", name = "moshi", version.ref = "moshi"}
-retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+moshi-kotlin = {group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi"}
+retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-moshi = {group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit-moshi"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ktlint = {id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint"}
+
 
