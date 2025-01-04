@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.amcd.figma.template.filler"
+    namespace = "com.amcd.figmatemplatefiller"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.amcd.figma.template.filler"
+        applicationId = "com.amcd.figmatemplatefiller"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
@@ -67,6 +67,9 @@ dependencies {
     implementation(libs.koin)
 
     testImplementation(libs.junit)
+    testImplementation(libs.assertj.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

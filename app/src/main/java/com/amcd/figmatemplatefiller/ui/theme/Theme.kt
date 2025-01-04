@@ -1,4 +1,4 @@
-package com.amcd.figma.template.filler.ui.theme
+package com.amcd.figmatemplatefiller.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

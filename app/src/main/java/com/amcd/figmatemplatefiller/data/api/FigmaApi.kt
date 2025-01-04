@@ -1,6 +1,6 @@
-package com.amcd.figma.template.filler.data.api
+package com.amcd.figmatemplatefiller.data.api
 
-import com.amcd.figma.template.filler.data.api.model.TemplateUrlResponse
+import com.amcd.figmatemplatefiller.data.api.model.TemplateUrlResponse
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET

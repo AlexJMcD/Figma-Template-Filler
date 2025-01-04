@@ -1,4 +1,4 @@
-package com.amcd.figma.template.filler.data.api.model
+package com.amcd.figmatemplatefiller.data.api.model
 
 import com.squareup.moshi.Json
 

@@ -1,6 +1,6 @@
-package com.amcd.figma.template.filler.data.api.util
+package com.amcd.figmatemplatefiller.data.api.util
 
-import com.amcd.figma.template.filler.data.api.errorhandler.ErrorHandler
+import com.amcd.figmatemplatefiller.data.api.errorhandler.ErrorHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException

@@ -1,7 +1,7 @@
-package com.amcd.figma.template.filler
+package com.amcd.figmatemplatefiller
 
 import android.app.Application
-import com.amcd.figma.template.filler.data.di.dataModule
+import com.amcd.figmatemplatefiller.data.di.dataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

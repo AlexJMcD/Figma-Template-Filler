@@ -7,9 +7,11 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
+assertj = "3.27.0"
 composeBom = "2024.12.01"
 koin = "4.1.0-Beta3"
 ktlint = "11.1.0"
+mockk = "1.13.13"
 moshi = "1.15.2"
 retrofit = "2.11.0"
 retrofit-moshi = "2.11.0"
@@ -29,7 +31,10 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+assertj-core = {group = "org.assertk", name = "assertj-cire", version.ref = "assertj"}
 koin = {group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
+mockk = {group = "io.mockk", name = "mockk", version.ref = "mockk"}
+mockk-android = {group = "io.mockk", name = "mockk-android", version.ref = "mockk"}
 moshi = {group = "com.squareup.moshi", name = "moshi", version.ref = "moshi"}
 moshi-kotlin = {group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi"}
 retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
