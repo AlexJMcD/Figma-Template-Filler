@@ -1,4 +1,4 @@
-package com.amcd.figma.template.filler.data.api.errorhandler
+package com.amcd.figmatemplatefiller.data.api.errorhandler
 
 import retrofit2.HttpException
 

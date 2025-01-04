@@ -1,4 +1,4 @@
-package com.amcd.figma.template.filler.ui.theme
+package com.amcd.figmatemplatefiller.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

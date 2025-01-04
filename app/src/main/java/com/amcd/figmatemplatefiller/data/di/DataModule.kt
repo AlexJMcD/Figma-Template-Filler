@@ -1,6 +1,6 @@
-package com.amcd.figma.template.filler.data.di
+package com.amcd.figmatemplatefiller.data.di
 
-import com.amcd.figma.template.filler.data.api.FigmaApi
+import com.amcd.figmatemplatefiller.data.api.FigmaApi
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
