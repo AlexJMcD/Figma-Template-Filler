@@ -19,10 +19,21 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val figmaToken: String = project.findProperty("FIGMA_API_TOKEN")?.toString() ?: "default-token"
+        buildConfigField(type = "String", name = "FIGMA_API_TOKEN", value = "\"$figmaToken\"")
     }
 
     buildTypes {
         release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+
+        debug {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -39,6 +50,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
