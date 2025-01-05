@@ -27,7 +27,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-
       # Ensure gradlew has the correct permissions
       - name: Grant execute permissions to gradlew
         run: chmod +x ./gradlew
@@ -41,6 +40,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      # Set FIGMA_API_TOKEN environment variable for the build process
+      - name: Set FIGMA_API_TOKEN
+        run: echo "FIGMA_API_TOKEN=${{ secrets.FIGMA_API_TOKEN }}" >> $GITHUB_ENV
+
       # Install dependencies and build the project
       - name: Build with Gradle
         run: ./gradlew clean build
@@ -52,3 +55,14 @@ jobs:
       # Run lint checks
       - name: Run Lint Checks
         run: ./gradlew lint
+
+      # Build Debug APK
+      - name: Build APK
+        run: ./gradlew assembleDebug
+
+      # Upload APK as an artifact
+      - name: Upload Debug APK Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk

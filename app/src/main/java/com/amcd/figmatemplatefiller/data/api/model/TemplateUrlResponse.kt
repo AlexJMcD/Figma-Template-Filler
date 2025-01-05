@@ -14,5 +14,5 @@ data class TemplateUrlResponse(
     @Json(name = "images")
     val images: Map<String, String?>,
     @Json(name = "status")
-    val status: Number?
+    val status: Int?
 )
