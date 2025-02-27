@@ -8,6 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 import retrofit2.http.Url
 
 interface FigmaApi {
@@ -21,6 +22,7 @@ interface FigmaApi {
         @Header("X-Figma-Token") authHeader: String = BuildConfig.FIGMA_API_TOKEN
     ): Response<TemplateUrlResponse>
 
+    @Streaming
     @GET
     suspend fun fetchTemplateSvg(@Url url: String): Response<ResponseBody>
 }
